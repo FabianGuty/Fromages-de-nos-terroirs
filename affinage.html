@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="L'affinage artisanal chez Fromages de nos Terroirs. Découvrez notre atelier créé en 2018 pour sublimer chaque fromage dans nos caves.">
+    <title>L'Affinage | Fromages de nos Terroirs</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- PWA and Modern Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1032CF">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css?v=2.0">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <picture>
+                            <source srcset="images/logo-header.webp" type="image/webp">
+                            <img src="images/logo-header.png" alt="Fromages de nos Terroirs" class="logo-image">
+                        </picture>
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <span class="nav-current-page">Affinage</span>
+                    <ul class="nav-list" id="navList">
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="nos-valeurs.html" class="nav-link">Nos Valeurs</a></li>
+                        <li><a href="produits-services.html" class="nav-link">Produits & Services</a></li>
+                        <li><a href="affinage.html" class="nav-link active">Affinage</a></li>
+                        <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-internal hero-affinage">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">L'Affinage</h1>
+            <p class="hero-subtitle animate-fade-in-delay">Notre atelier artisanal depuis 2018</p>
+        </div>
+    </section>
+
+    <!-- What is Affinage Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">L'affinage, qu'est-ce que c'est ?</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-text">
+                    <p>
+                        L'affinage consiste à placer dans des caves des fromages très jeunes (quelques jours),
+                        et à leur apporter des soins réguliers jusqu'à l'obtention d'une texture et des saveurs
+                        recherchées.
+                    </p>
+                    <p>
+                        Chaque fromage nécessite une <strong>"ambiance" spécifique</strong>. Dans chacune des caves,
+                        les paramètres suivants sont contrôlés :
+                    </p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-thermometer-half"></i> Température</li>
+                        <li><i class="fas fa-tint"></i> Hygrométrie</li>
+                        <li><i class="fas fa-wind"></i> Vitesse de l'air</li>
+                        <li><i class="fas fa-door-open"></i> Aération</li>
+                    </ul>
+                    <p>
+                        Chaque fromage nécessite également des <strong>soins réguliers</strong> :
+                        retournements, frottage, brossage, lavage…
+                    </p>
+                </div>
+
+                <div class="content-highlight">
+                    <div class="video-wrapper-compact">
+                        <iframe src="https://www.youtube.com/embed/T5kUK05q39k"
+                            title="L'affinage des fromages de nos terroirs" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pour quels fromages - Two column layout with image -->
+            <div class="content-grid"
+                style="margin-top: var(--spacing-lg); gap: var(--spacing-lg); align-items: stretch;">
+                <div class="content-text">
+                    <div class="highlight-card"
+                        style="margin: 0; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                        <i class="fas fa-cheese"></i>
+                        <h3>Pour quels fromages ?</h3>
+                        <p>
+                            Nous affinons dans nos caves essentiellement des <strong>fromages régionaux</strong>
+                            et quelques autres fromages français. Les caves nous permettent également de prolonger
+                            l'affinage de certains fromages n'ayant pas encore atteint l'optimum de dégustation.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-highlight" style="display: flex; align-items: center; min-height: 300px;">
+                    <picture>
+                        <source srcset="images/fromage-affinage-contact.webp" type="image/webp">
+                        <img src="images/fromage-affinage-contact.jpg"
+                            alt="Fromages en cours d'affinage sur étagères en bois"
+                            style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);"
+                            loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre Atelier d'Affinage</h2>
+                <p class="section-subtitle">Un savoir-faire artisanal au service de la qualité</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <picture>
+                                <source srcset="images/affinage-retournement.webp" type="image/webp">
+                                <img src="images/affinage-retournement.jpg" alt="Retournement des fromages Saint-Ivy"
+                                    loading="lazy">
+                            </picture>
+                            <div class="carousel-caption">
+                                <h4>Retournement des fromages</h4>
+                                <p>Saint-Ivy en cours d'affinage</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <picture>
+                                <source srcset="images/affinage-lavage.webp" type="image/webp">
+                                <img src="images/affinage-lavage.jpg" alt="Lavage des fromages Coeurs de Bretagne"
+                                    loading="lazy">
+                            </picture>
+                            <div class="carousel-caption">
+                                <h4>Lavage des fromages</h4>
+                                <p>Coeurs de Bretagne</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <picture>
+                                <source srcset="images/affinage-planches.webp" type="image/webp">
+                                <img src="images/affinage-planches.jpg"
+                                    alt="Les fromages Pondi sur les planches d'affinage" loading="lazy">
+                            </picture>
+                            <div class="carousel-caption">
+                                <h4>Planches d'affinage</h4>
+                                <p>Fromages Pondi sur épicéa</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <picture>
+                                <source srcset="images/affinage-mucor.webp" type="image/webp">
+                                <img src="images/affinage-mucor.jpg" alt="Mucor, ou poil de chat" loading="lazy">
+                            </picture>
+                            <div class="carousel-caption">
+                                <h4>Mucor naturel</h4>
+                                <p>Le "poil de chat" des caves</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <picture>
+                                <source srcset="images/affinage-brossage.webp" type="image/webp">
+                                <img src="images/affinage-brossage.jpg" alt="Brossage du Pondi" loading="lazy">
+                            </picture>
+                            <div class="carousel-caption">
+                                <h4>Brossage artisanal</h4>
+                                <p>Soin du Pondi</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <picture>
+                                <source srcset="images/fromage-guerledan.webp" type="image/webp">
+                                <img src="images/fromage-guerledan.png" alt="Fromages de chèvre Guerlédan"
+                                    loading="lazy">
+                            </picture>
+                            <div class="carousel-caption">
+                                <h4>Guerlédan</h4>
+                                <p>Sur paillon de seigle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="carousel-btn carousel-btn-prev" aria-label="Image précédente">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next" aria-label="Image suivante">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Dot Indicators -->
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" aria-label="Aller à l'image 1"></button>
+                    <button class="carousel-dot" aria-label="Aller à l'image 2"></button>
+                    <button class="carousel-dot" aria-label="Aller à l'image 3"></button>
+                    <button class="carousel-dot" aria-label="Aller à l'image 4"></button>
+                    <button class="carousel-dot" aria-label="Aller à l'image 5"></button>
+                    <button class="carousel-dot" aria-label="Aller à l'image 6"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Découvrez nos fromages affinés</h2>
+                <p>Venez déguster le résultat de notre savoir-faire artisanal dans nos boutiques de Pontivy et Vannes
+                </p>
+                <div class="cta-buttons">
+                    <a href="produits-services.html" class="btn btn-primary">
+                        <i class="fas fa-cheese"></i> Nos Produits
+                    </a>
+                    <a href="index.html#contact" class="btn btn-secondary">
+                        <i class="fas fa-map-marker-alt"></i> Nous Trouver
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Fromages de nos Terroirs</h4>
+                    <p>Crémiers-fromagers passionnés, spécialisés dans l'affinage artisanal depuis 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section footer-contact">
+                    <h4>Pontivy</h4>
+                    <div class="footer-contact-item">
+                        <svg class="icon-location" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                fill="currentColor" />
+                        </svg>
+                        <div>
+                            <p>5 B rue Colette Besson</p>
+                            <p>Zone de Pont-Er-Morh</p>
+                            <p>56300 Pontivy, Morbihan</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="tel:0297380988">02 97 38 09 88</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-email" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="mailto:fromages.terroirs@free.fr">fromages.terroirs@free.fr</a>
+                    </div>
+                    <p class="footer-hours"><strong>Horaires:</strong> Lun-Sam 9h-13h & 14h-19h</p>
+                </div>
+
+                <div class="footer-section footer-contact">
+                    <h4>Vannes</h4>
+                    <div class="footer-contact-item">
+                        <svg class="icon-location" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                fill="currentColor" />
+                        </svg>
+                        <div>
+                            <p>55 avenue Borgnis Desbordes</p>
+                            <p>56000 Vannes, Morbihan</p>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="tel:0297630640">02 97 63 06 40</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-email" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="mailto:fromages.terroirs@free.fr">fromages.terroirs@free.fr</a>
+                    </div>
+                    <p class="footer-hours"><strong>Horaires:</strong> Mar-Sam 9h30-13h & 15h-19h</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fromages de nos Terroirs | Tous droits réservés |
+                    <a href="mentions-legales.html">Mentions Légales</a> |
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Bubble -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Ouvrir le chat">
+            <i class="fas fa-comments"></i>
+            <span class="chatbot-badge">1</span>
+        </button>
+
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-content">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div>
+                        <h4>Assistant Fromager</h4>
+                        <span class="chatbot-status">En ligne</span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Bonjour! 👋 Comment puis-je vous aider aujourd'hui?</p>
+                        <span class="message-time">Maintenant</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-quick-replies">
+                <button class="quick-reply">Horaires d'ouverture</button>
+                <button class="quick-reply">Commander</button>
+                <button class="quick-reply">Conseils fromages</button>
+            </div>
+
+            <div class="chatbot-input">
+                <input type="text" placeholder="Écrivez votre message..." id="chatbotInput">
+                <button class="chatbot-send" id="chatbotSend" aria-label="Envoyer">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js?v=2.0"></script>
+</body>
+
+</html>

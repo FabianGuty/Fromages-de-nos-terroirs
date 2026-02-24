@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Fromages de nos Terroirs à Pontivy et Vannes. Crémiers-fromagers spécialisés dans l'affinage de fromages régionaux et la sélection de vins d'exception.">
+    <title>Fromages de nos Terroirs | Crémiers-Fromagers à Pontivy et Vannes</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- PWA and Modern Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1032CF">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css?v=2">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <picture>
+                        <source srcset="images/logo.webp" type="image/webp">
+                        <img src="images/logo.png" alt="Fromages de nos Terroirs" class="logo-image">
+                    </picture>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <span class="nav-current-page">Accueil</span>
+                    <ul class="nav-list" id="navList">
+                        <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                        <li><a href="nos-valeurs.html" class="nav-link">Nos Valeurs</a></li>
+                        <li><a href="produits-services.html" class="nav-link">Produits & Services</a></li>
+                        <li><a href="affinage.html" class="nav-link">Affinage</a></li>
+                        <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title animate-fade-in">L'Excellence Fromagère</h2>
+            <p class="hero-subtitle animate-fade-in-delay">Crémiers-fromagers passionnés depuis 2010</p>
+            <p class="hero-description animate-fade-in-delay-2">
+                Découvrez notre sélection de fromages régionaux affinés dans nos caves
+                et une centaine de références de vins soigneusement choisis
+            </p>
+            <div class="hero-buttons animate-fade-in-delay-3">
+                <a href="produits-services.html" class="btn btn-primary">Nos Produits</a>
+                <a href="#contact" class="btn btn-secondary">Nous Contacter</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Notre Histoire Section -->
+    <section class="histoire-section" id="histoire">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre Histoire</h2>
+                <p class="section-subtitle">Une passion familiale depuis 2010</p>
+            </div>
+
+            <div class="histoire-content">
+                <div class="histoire-timeline">
+                    <div class="timeline-marker">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2010</h3>
+                        <p>Installation à <strong>Pontivy</strong> en tant que crémiers-fromagers</p>
+                        <div class="timeline-image">
+                            <picture>
+                                <source srcset="images/timeline-2010.webp" type="image/webp">
+                                <img src="images/timeline-2010.png" alt="Notre boutique à Pontivy en 2010"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="histoire-timeline">
+                    <div class="timeline-marker">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2018</h3>
+                        <p>Création de notre <strong>atelier d'affinage</strong> pour valoriser les fromages et le
+                            travail des producteurs fermiers régionaux</p>
+                        <div class="timeline-image">
+                            <picture>
+                                <source srcset="images/timeline-2018.webp" type="image/webp">
+                                <img src="images/timeline-2018.png" alt="Notre atelier d'affinage créé en 2018"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="histoire-timeline">
+                    <div class="timeline-marker">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Aujourd'hui</h3>
+                        <p>Extension à <strong>Vannes</strong> pour vous offrir nos fromages affinés, une large gamme de
+                            fromages français et européens, ainsi qu'une centaine de références de vins pour accompagner
+                            ces richesses gastronomiques</p>
+                        <div class="timeline-image">
+                            <picture>
+                                <source srcset="images/timeline-today.webp" type="image/webp">
+                                <img src="images/timeline-today.png" alt="Nos boutiques aujourd'hui à Pontivy et Vannes"
+                                    loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section" id="valeurs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Valeurs & Engagements</h2>
+                <p class="section-subtitle">Une passion pour l'authenticité et la qualité</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Terroir Local</h3>
+                    <p>Valorisation des producteurs fermiers régionaux et de leurs savoir-faire traditionnels</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Affinage Artisanal</h3>
+                    <p>Atelier d'affinage créé en 2018 pour sublimer chaque fromage dans nos caves</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <h3>Sélection de Vins</h3>
+                    <p>Une centaine de références pour accompagner parfaitement nos fromages</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Conseil Expert</h3>
+                    <p>Notre équipe passionnée vous guide dans vos choix avec expertise et convivialité</p>
+                </div>
+
+                <div class="values-cta">
+                    <a href="nos-valeurs.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-compass"></i>
+                        Découvrir tous nos engagements
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="equipe">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Notre Équipe</h2>
+                <p class="section-subtitle">Des passionnés à votre service</p>
+            </div>
+
+            <div class="team-content">
+                <div class="team-intro">
+                    <p>
+                        Lucie et Vincent, nos deux gérants historiques, sont présents alternativement
+                        sur nos sites de Vannes et Pontivy pour vous accueillir, vous conseiller et
+                        partager leur passion du fromage.
+                    </p>
+                </div>
+
+                <!-- Team Photos Grid -->
+                <div class="team-photos-grid">
+                    <div class="team-photo-item">
+                        <picture>
+                            <source srcset="images/lucie-vincent.webp" type="image/webp">
+                            <img src="images/lucie-vincent.jpg" alt="Lucie et Vincent - Gérants" loading="lazy">
+                        </picture>
+                        <div class="team-caption">
+                            <p>Lucie et Vincent, gérants passionnés</p>
+                        </div>
+                    </div>
+
+                    <div class="team-photo-item">
+                        <picture>
+                            <source srcset="images/equipe-pontivy.webp" type="image/webp">
+                            <img src="images/equipe-pontivy.jpg" alt="Équipe Pontivy - Sabine et Maxime" loading="lazy">
+                        </picture>
+                        <div class="team-caption">
+                            <p>Pour vous accueillir, vous conseiller et vous servir à Pontivy (au milieu : Sabine, à
+                                droite : Maxime)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Commander ou Demander un Devis</h2>
+                <p class="section-subtitle">Remplissez notre formulaire pour passer commande ou demander un devis
+                    personnalisé</p>
+            </div>
+
+            <div class="contact-cta">
+                <button class="btn btn-primary btn-large" id="openOrderForm">
+                    <i class="fas fa-shopping-cart"></i>
+                    Commander / Devis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Modal -->
+    <div id="orderFormModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-large">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <h2 class="modal-title">Bon de Commande / Demande de Devis</h2>
+
+            <div class="modal-body">
+                <form id="orderForm" class="order-form">
+                    <!-- Section 1: Contact Information -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-user"></i>
+                            Vos Informations
+                        </h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nom">Nom <span class="required">*</span></label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom <span class="required">*</span></label>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone <span class="required">*</span></label>
+                                <input type="tel" id="telephone" name="telephone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Adresse E-mail <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Request Type -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-clipboard-list"></i>
+                            Type de Demande
+                        </h3>
+                        <div class="form-group">
+                            <label>S'agit-il d'une commande ou d'une demande de devis ? <span
+                                    class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="requestType" value="commande" required>
+                                    <span>Commande</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="requestType" value="devis" required>
+                                    <span>Devis</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Product Selection -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-cheese"></i>
+                            Choix de Produits/Formules
+                        </h3>
+                        <p class="form-help">Sélectionnez au moins un produit ou une formule <span
+                                class="required">*</span></p>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="assortiment_aperitif">
+                                <span>Assortiment apéritif ou fin de repas sans présentation</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="repas_fromage">
+                                <span>Repas fromage sans présentation</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="plateau_aperitif_unique">
+                                <span>Plateau apéritif ou fin de repas sur plateau à usage unique</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="plateau_aperitif_bois">
+                                <span>Plateau apéritif ou fin de repas sur plateau bois</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="repas_plateau_unique">
+                                <span>Repas fromage sur plateau à usage unique</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="repas_plateau_bois">
+                                <span>Repas fromage sur plateau bois</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="predecoupe_aperitif_unique">
+                                <span>Pré-découpés apéritif ou fin de repas sur plateau à usage unique</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="predecoupe_aperitif_bois">
+                                <span>Pré-découpés apéritif ou fin de repas sur plateau bois</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="predecoupe_repas_unique">
+                                <span>Pré-découpés repas fromage sur plateau à usage unique</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="predecoupe_repas_bois">
+                                <span>Pré-découpés repas fromage sur plateau bois</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="raclette" id="raclette">
+                                <span>Raclette (sans présentation)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="fondue" id="fondue">
+                                <span>Fondue (sans présentation)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="vin">
+                                <span>Vin</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="products" value="charcuterie">
+                                <span>Charcuterie</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Additional Details -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-comment-dots"></i>
+                            Remarques et Précisions
+                        </h3>
+                        <div class="form-group">
+                            <label for="remarques">
+                                Remarques / Précisions / Choix des produits
+                                <span id="remarquesRequired" class="required" style="display: none;">*</span>
+                            </label>
+                            <p class="form-help">Obligatoire pour les raclettes et fondues</p>
+                            <textarea id="remarques" name="remarques" rows="5"
+                                placeholder="Précisez vos choix de fromages, quantités, ou toute autre information utile..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Pickup Information -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-store"></i>
+                            Informations de Retrait
+                        </h3>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Boutique de retrait <span class="required">*</span></label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="boutique" value="pontivy" required>
+                                        <span>Pontivy</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="boutique" value="vannes" required>
+                                        <span>Vannes</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mode de paiement (à la réception en boutique) <span
+                                        class="required">*</span></label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="paiement" value="carte" required>
+                                        <span>Carte bancaire</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="paiement" value="especes" required>
+                                        <span>Espèces</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="paiement" value="titre" required>
+                                        <span>Titre-restaurant</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateRetrait">Date de retrait souhaitée <span
+                                        class="required">*</span></label>
+                                <input type="date" id="dateRetrait" name="dateRetrait" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="heureRetrait">Heure de retrait <span class="required">*</span></label>
+                                <p class="form-help">Minimum 5h ouvrées de délai de préparation</p>
+                                <input type="time" id="heureRetrait" name="heureRetrait" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Section -->
+                    <div class="form-submit-section">
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer ma commande
+                        </button>
+                        <p class="form-disclaimer">
+                            Dès que vous cliquez, la commande ou demande de devis nous est envoyée automatiquement.
+                            Vous ne recevrez pas de confirmation par mail sauf si nous avons besoin de renseignements
+                            supplémentaires.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Chiffres Clés</h2>
+                <p class="section-subtitle">Des données qui témoignent de notre engagement</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon stat-icon-emoji">
+                        <i class="fa-solid fa-house"></i><!-- 🏡 -->
+                    </div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Fermes Visitées</div>
+                    <div class="stat-description">En recherche constante de qualité</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon stat-icon-emoji">
+                        <i class="fa-solid fa-cow"></i><!-- 🐄 -->
+                    </div>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Races Régionales</div>
+                    <div class="stat-description">Valorisées et préservées</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon stat-icon-emoji">
+                        <i class="fa-solid fa-calendar"></i><!-- 📅 -->
+                    </div>
+                    <div class="stat-number">2010</div>
+                    <div class="stat-label">Année de Création</div>
+                    <div class="stat-description">Crémiers-fromagers passionnés</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon stat-icon-emoji">
+                        <i class="fa-solid fa-sun"></i><!-- ☀️ -->
+                    </div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Énergie Renouvelable</div>
+                    <div class="stat-description">Panneaux photovoltaïques</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Fromages de nos Terroirs</h4>
+                    <p>Crémiers-fromagers passionnés, spécialisés dans l'affinage artisanal depuis 2010.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section footer-contact">
+                    <h4>Pontivy</h4>
+                    <div class="footer-contact-item">
+                        <svg class="icon-location" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="https://www.google.com/maps/search/?api=1&query=5+B+rue+Colette+Besson+Zone+de+Pont-Er-Morh+56300+Pontivy+Morbihan"
+                            target="_blank" rel="noopener noreferrer">
+                            <p>5 B rue Colette Besson</p>
+                            <p>Zone de Pont-Er-Morh</p>
+                            <p>56300 Pontivy, Morbihan</p>
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="tel:0297380988">02 97 38 09 88</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-email" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="mailto:fromages.terroirs@free.fr">fromages.terroirs@free.fr</a>
+                    </div>
+                    <p class="footer-hours"><strong>Horaires:</strong> Lun-Sam 9h-13h & 14h-19h</p>
+                </div>
+
+                <div class="footer-section footer-contact">
+                    <h4>Vannes</h4>
+                    <div class="footer-contact-item">
+                        <svg class="icon-location" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="https://www.google.com/maps/search/?api=1&query=55+avenue+Borgnis+Desbordes+56000+Vannes+Morbihan"
+                            target="_blank" rel="noopener noreferrer">
+                            <p>55 avenue Borgnis Desbordes</p>
+                            <p>56000 Vannes, Morbihan</p>
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="tel:0297630640">02 97 63 06 40</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg class="icon-email" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                fill="currentColor" />
+                        </svg>
+                        <a href="mailto:fromages.terroirs@free.fr">fromages.terroirs@free.fr</a>
+                    </div>
+                    <p class="footer-hours"><strong>Horaires:</strong> Mar-Sam 9h30-13h & 15h-19h</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fromages de nos Terroirs | Tous droits réservés |
+                    <a href="mentions-legales.html">Mentions Légales</a> |
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Bubble -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Ouvrir le chat">
+            <i class="fas fa-comments"></i>
+            <span class="chatbot-badge">1</span>
+        </button>
+
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-content">
+                    <div class="chatbot-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div>
+                        <h4>Assistant Fromager</h4>
+                        <span class="chatbot-status">En ligne</span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Bonjour! 👋 Comment puis-je vous aider aujourd'hui?</p>
+                        <span class="message-time">Maintenant</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-quick-replies">
+                <button class="quick-reply">Horaires d'ouverture</button>
+                <button class="quick-reply">Commander</button>
+                <button class="quick-reply">Conseils fromages</button>
+            </div>
+
+            <div class="chatbot-input">
+                <input type="text" placeholder="Écrivez votre message..." id="chatbotInput">
+                <button class="chatbot-send" id="chatbotSend" aria-label="Envoyer">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js?v=1.1.0"></script>
+</body>
+
+</html>
