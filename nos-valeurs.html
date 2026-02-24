@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Politique de confidentialité de Fromages de nos Terroirs">
-    <title>Politique de Confidentialité | Fromages de nos Terroirs</title>
+    <meta name="description"
+        content="Nos valeurs et engagements : sélection rigoureuse, terroir local, respect de l'environnement et valorisation des savoir-faire traditionnels.">
+    <title>Nos Valeurs | Fromages de nos Terroirs</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -18,10 +19,11 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fromages-nos-terroirs.fr/politique-confidentialite.html">
-    <meta property="og:title" content="Politique de Confidentialité | Fromages de nos Terroirs">
-    <meta property="og:description" content="Politique de confidentialité de Fromages de nos Terroirs">
-    <meta property="og:image" content="https://fromages-nos-terroirs.fr/images/logo.png">
+    <meta property="og:url" content="https://fromages-nos-terroirs.fr/nos-valeurs.html">
+    <meta property="og:title" content="Nos Valeurs | Fromages de nos Terroirs">
+    <meta property="og:description"
+        content="Nos valeurs et engagements : sélection rigoureuse, terroir local, respect de l'environnement et valorisation des savoir-faire traditionnels.">
+    <meta property="og:image" content="https://fromages-nos-terroirs.fr/images/hero-valeurs.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +35,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -42,10 +44,12 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <picture>
-                        <source srcset="images/logo.webp" type="image/webp">
-                        <img src="images/logo.png" alt="Fromages de nos Terroirs" class="logo-image">
-                    </picture>
+                    <a href="index.html">
+                        <picture>
+                            <source srcset="images/logo-header.webp" type="image/webp">
+                            <img src="images/logo-header.png" alt="Fromages de nos Terroirs" class="logo-image">
+                        </picture>
+                    </a>
                 </div>
 
                 <nav class="nav" id="nav">
@@ -54,10 +58,10 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <span class="nav-current-page">Privacy</span>
+                    <span class="nav-current-page">Nos Valeurs</span>
                     <ul class="nav-list" id="navList">
                         <li><a href="index.html" class="nav-link">Accueil</a></li>
-                        <li><a href="nos-valeurs.html" class="nav-link">Nos Valeurs</a></li>
+                        <li><a href="nos-valeurs.html" class="nav-link active">Nos Valeurs</a></li>
                         <li><a href="produits-services.html" class="nav-link">Produits & Services</a></li>
                         <li><a href="affinage.html" class="nav-link">Affinage</a></li>
                         <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
@@ -69,58 +73,371 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero hero-small">
+    <section class="hero hero-internal hero-valeurs">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Politique de Confidentialité</h1>
+            <h1 class="hero-title animate-fade-in">Nos Valeurs & Engagements</h1>
+            <p class="hero-subtitle animate-fade-in-delay">Une passion pour l'authenticité et la qualité</p>
         </div>
     </section>
 
-    <!-- Privacy Content Section -->
-    <section class="legal-section">
+    <!-- Values Section -->
+    <section class="content-section">
         <div class="container">
-            <div class="legal-content">
-                <div class="legal-block">
-                    <h2>Protection de vos données personnelles</h2>
-                    <p>Les données renseignées dans le présent formulaire sont traitées par Fromages de nos Terroirs.
-                        Les informations collectées ne seront utilisées que dans la mesure où elles sont nécessaires
-                        pour traiter vos demandes.</p>
+            <div class="section-header">
+                <h2 class="section-title">Nos Engagements au Quotidien</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Sélection des Produits</h3>
+                    <p>Recherche constante de nouveaux produits à travers des dégustations et visites régulières de
+                        producteurs fermiers. En 2018/2019, nous avons visité près de 50 fermes.</p>
+                    <button class="savoir-plus-btn" id="openProduitsModal"
+                        onclick="event.preventDefault(); event.stopPropagation();">
+                        SAVOIR+
+                    </button>
                 </div>
 
-                <div class="legal-block">
-                    <h3>Collecte et utilisation des données</h3>
-                    <p>Les informations collectées sont destinées à Fromages de nos Terroirs et à ses sous-traitants.
-                        Vos informations sont conservées au maximum 3 ans après votre dernier contact avec Fromages de
-                        nos Terroirs.</p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Savoir-Faire Traditionnels</h3>
+                    <p>Valorisation des terroirs, utilisation des races régionales et fabrications traditionnelles avec
+                        techniques et outils d'autrefois.</p>
                 </div>
 
-                <div class="legal-block">
-                    <h3>Vos droits</h3>
-                    <p>Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée et au Règlement
-                        européen n°2016/679/UE du 27 avril 2016, vous bénéficiez d'un droit d'accès, de rectification,
-                        de portabilité et d'effacement de vos données ou encore de limitation du traitement.</p>
-                    <p>Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous
-                        concernant. Vous disposez d'un droit d'accès, de rectification. Vous pouvez émettre des
-                        directives sur la conservation, la suppression ou la communication de vos données personnelles
-                        après votre décès.</p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Terroir Local</h3>
+                    <p>Soutien à la filière fromagère bretonne et participation à son essor en valorisant
+                        prioritairement ses produits dans nos caves d'affinage.</p>
                 </div>
 
-                <div class="legal-block">
-                    <h3>Exercer vos droits</h3>
-                    <p>Vous pouvez exercer vos droits en nous écrivant à <a
-                            href="mailto:fromages.terroirs@free.fr">fromages.terroirs@free.fr</a>. Pour être traitée,
-                        votre demande devra être accompagnée d'un justificatif d'identité.</p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Respect de l'Environnement</h3>
+                    <p>Minimisation de l'impact transport, tri sélectif, matériaux recyclables, et contrôle de notre
+                        consommation d'énergie.</p>
+                    <button class="savoir-plus-btn" id="openEnvironnementModal"
+                        onclick="event.preventDefault(); event.stopPropagation();">
+                        SAVOIR+
+                    </button>
                 </div>
 
-                <div class="legal-block">
-                    <h3>Liste d'opposition Bloctel</h3>
-                    <p>Enfin, nous vous informons de l'existence de la liste d'opposition au démarchage téléphonique «
-                        Bloctel », sur laquelle vous pouvez vous inscrire : <a href="https://www.bloctel.gouv.fr/"
-                            target="_blank" rel="noopener noreferrer">https://www.bloctel.gouv.fr/</a></p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Lutte contre le Gaspillage</h3>
+                    <p>Paniers à tarif réduit proposés ponctuellement pour éviter de jeter de la marchandise.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Formation & Transmission</h3>
+                    <p>Adhérents de la Fédération des Fromagers de France et impliqués dans la formation au métier de
+                        crémier-fromager.</p>
+                    <button class="savoir-plus-btn" id="openImplicationModal"
+                        onclick="event.preventDefault(); event.stopPropagation();">
+                        SAVOIR+
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal for Produits Selection Criteria -->
+    <div id="produitsModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <h2 class="modal-title">Notre Sélection de Produits</h2>
+            <div class="modal-body">
+                <ul class="criteria-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous sélectionnons nos produits en premier lieu sur le critère organoleptique (saveur…) à
+                            travers une dégustation systématique.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous privilégions les fromages fermiers et artisanaux, au lait cru.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>A produits équivalents, nous sélectionnons les produits locaux, de saison, issus de
+                            l'agriculture biologique ou labellisés.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous travaillons en priorité avec des fermes qui nourrissent les animaux avec de l'herbe
+                            fraiche (prairies, alpages…) et/ou du foin.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous privilégions également les produits sans additifs (conservateurs, agents de texture,
+                            arômes artificiels, colorants…).</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Environnement Practices -->
+    <div id="environnementModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <h2 class="modal-title">Respect de l'Environnement</h2>
+            <div class="modal-body">
+                <ul class="criteria-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous cherchons en permanence à minimiser l'impact du transport des produits.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous pratiquons le tri sélectif.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous utilisons au maximum des matériaux recyclables (cagettes en bois, paille…).</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous utilisons le moins possible d'emballages à usage unique.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous acceptons de conditionner nos produits dans les contenants apportés par les clients.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Nous contrôlons notre consommation d'énergie (eau, électricité). La majeure partie de
+                            l'électricité consommée est produite par des panneaux photovoltaïques.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <p>Notre dispositif d'évacuation des eaux usées respecte les normes en vigueur.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Local Implication -->
+    <div id="implicationModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer">&times;</button>
+            <h2 class="modal-title">Implication dans la vie locale</h2>
+            <div class="modal-body">
+                <ul class="criteria-list">
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <p>Nous sommes membres du bureau de l'Union des Commerçants de Pontivy.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-handshake"></i>
+                        <p>Nous organisons des actions avec d'autres commerçants.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>Nous participons aux animations locales.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-truck"></i>
+                        <p>Nous privilégions les prestataires locaux pour les travaux d'entretien et de maintenance, et
+                            dans la mesure du possible la fourniture des matériels/matériaux.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selection Criteria Section -->
+    <section class="content-section" style="background: var(--color-bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Critères de Sélection</h2>
+                <p class="section-subtitle">Une démarche rigoureuse pour garantir la qualité</p>
+            </div>
+
+            <div class="criteria-enhanced-list">
+                <div class="criteria-item">
+                    <div class="criteria-icon-wrapper">
+                        <span class="criteria-number">1</span>
+                        <div class="criteria-icon">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                    </div>
+                    <div class="criteria-content">
+                        <h4>Dégustation Systématique</h4>
+                        <p>Sélection en premier lieu sur le critère organoleptique (saveur) à travers une dégustation
+                            systématique</p>
+                    </div>
+                </div>
+
+                <div class="criteria-item">
+                    <div class="criteria-icon-wrapper">
+                        <span class="criteria-number">2</span>
+                        <div class="criteria-icon">
+                            <i class="fas fa-cheese"></i>
+                        </div>
+                    </div>
+                    <div class="criteria-content">
+                        <h4>Fromages Fermiers & Artisanaux</h4>
+                        <p>Privilège aux fromages fermiers et artisanaux, au lait cru pour une authenticité maximale</p>
+                    </div>
+                </div>
+
+                <div class="criteria-item">
+                    <div class="criteria-icon-wrapper">
+                        <span class="criteria-number">3</span>
+                        <div class="criteria-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="criteria-content">
+                        <h4>Produits Locaux & Bio</h4>
+                        <p>Produits locaux, de saison, issus de l'agriculture biologique ou labellisés</p>
+                    </div>
+                </div>
+
+                <div class="criteria-item">
+                    <div class="criteria-icon-wrapper">
+                        <span class="criteria-number">4</span>
+                        <div class="criteria-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                    </div>
+                    <div class="criteria-content">
+                        <h4>Alimentation Naturelle</h4>
+                        <p>Fermes nourrissant les animaux avec de l'herbe fraîche (prairies, alpages) et/ou du foin</p>
+                    </div>
+                </div>
+
+                <div class="criteria-item">
+                    <div class="criteria-icon-wrapper">
+                        <span class="criteria-number">5</span>
+                        <div class="criteria-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="criteria-content">
+                        <h4>Sans Additifs</h4>
+                        <p>Produits sans conservateurs, agents de texture, arômes artificiels ou colorants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breeds Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Races Régionales Valorisées</h2>
+                <p class="section-subtitle">Préservation et promotion des races locales</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <picture>
+                        <source srcset="images/race-chevre-fosses.webp" type="image/webp">
+                        <img src="images/race-chevre-fosses.jpg" alt="Chèvre des fossés" loading="lazy">
+                    </picture>
+                    <div class="gallery-caption">
+                        <h4>Chèvre des Fossés</h4>
+                        <p>Race caprine bretonne</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <picture>
+                        <source srcset="images/race-montbeliardes.webp" type="image/webp">
+                        <img src="images/race-montbeliardes.jpg" alt="Montbéliardes" loading="lazy">
+                    </picture>
+                    <div class="gallery-caption">
+                        <h4>Montbéliardes</h4>
+                        <p>Vaches laitières</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <picture>
+                        <source srcset="images/race-brebis-lacaune.webp" type="image/webp">
+                        <img src="images/race-brebis-lacaune.jpg" alt="Brebis Lacaune" loading="lazy">
+                    </picture>
+                    <div class="gallery-caption">
+                        <h4>Brebis Lacaune</h4>
+                        <p>Race ovine</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <picture>
+                        <source srcset="images/race-froment-leon.webp" type="image/webp">
+                        <img src="images/race-froment-leon.jpg" alt="Froment du Léon" loading="lazy">
+                    </picture>
+                    <div class="gallery-caption">
+                        <h4>Froment du Léon</h4>
+                        <p>Race bovine bretonne</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <picture>
+                        <source srcset="images/race-bretonne-pie-noir.webp" type="image/webp">
+                        <img src="images/race-bretonne-pie-noir.png" alt="Bretonne Pie noir" loading="lazy">
+                    </picture>
+                    <div class="gallery-caption">
+                        <h4>Bretonne Pie Noir</h4>
+                        <p>Race bovine bretonne</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <picture>
+                        <source srcset="images/race-salers-puy-sancy.webp" type="image/webp">
+                        <img src="images/race-salers-puy-sancy.png" alt="Salers du Puy de Sancy" loading="lazy">
+                    </picture>
+                    <div class="gallery-caption">
+                        <h4>Salers du Puy de Sancy</h4>
+                        <p>Race bovine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Partagez nos valeurs ?</h2>
+                <p>Venez découvrir nos fromages et produits sélectionnés avec passion dans nos boutiques</p>
+                <div class="cta-buttons">
+                    <a href="produits-services.html" class="btn btn-primary">
+                        <i class="fas fa-cheese"></i> Nos Produits
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -143,12 +460,11 @@
                                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
                                 fill="currentColor" />
                         </svg>
-                        <a href="https://www.google.com/maps/search/?api=1&query=5+B+rue+Colette+Besson+Zone+de+Pont-Er-Morh+56300+Pontivy+Morbihan"
-                            target="_blank" rel="noopener noreferrer">
+                        <div>
                             <p>5 B rue Colette Besson</p>
                             <p>Zone de Pont-Er-Morh</p>
                             <p>56300 Pontivy, Morbihan</p>
-                        </a>
+                        </div>
                     </div>
                     <div class="footer-contact-item">
                         <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,11 +493,10 @@
                                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
                                 fill="currentColor" />
                         </svg>
-                        <a href="https://www.google.com/maps/search/?api=1&query=55+avenue+Borgnis+Desbordes+56000+Vannes+Morbihan"
-                            target="_blank" rel="noopener noreferrer">
+                        <div>
                             <p>55 avenue Borgnis Desbordes</p>
                             <p>56000 Vannes, Morbihan</p>
-                        </a>
+                        </div>
                     </div>
                     <div class="footer-contact-item">
                         <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
