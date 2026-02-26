@@ -39,6 +39,85 @@
     <link rel="stylesheet" href="styles.css?v=2">
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FoodEstablishment",
+          "@id": "https://fromages-nos-terroirs.fr/#pontivy",
+          "name": "Fromages de nos Terroirs - Pontivy",
+          "description": "Crémiers-fromagers spécialisés dans l'affinage artisanal de fromages régionaux et la sélection de vins d'exception, depuis 2010.",
+          "url": "https://fromages-nos-terroirs.fr",
+          "email": "fromages.terroirs@free.fr",
+          "telephone": "+33297380988",
+          "image": "https://fromages-nos-terroirs.fr/images/logo.png",
+          "logo": "https://fromages-nos-terroirs.fr/images/logo.png",
+          "priceRange": "€€",
+          "servesCuisine": "Fromagerie",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5B rue Colette Besson, Zone de Pont-Er-Morh",
+            "addressLocality": "Pontivy",
+            "postalCode": "56300",
+            "addressRegion": "Morbihan",
+            "addressCountry": "FR"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "09:00",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "14:00",
+              "closes": "19:00"
+            }
+          ]
+        },
+        {
+          "@type": "FoodEstablishment",
+          "@id": "https://fromages-nos-terroirs.fr/#vannes",
+          "name": "Fromages de nos Terroirs - Vannes",
+          "description": "Crémiers-fromagers spécialisés dans l'affinage artisanal de fromages régionaux et la sélection de vins d'exception, depuis 2010.",
+          "url": "https://fromages-nos-terroirs.fr",
+          "email": "fromages.terroirs@free.fr",
+          "telephone": "+33297630640",
+          "image": "https://fromages-nos-terroirs.fr/images/logo.png",
+          "logo": "https://fromages-nos-terroirs.fr/images/logo.png",
+          "priceRange": "€€",
+          "servesCuisine": "Fromagerie",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "55 avenue Borgnis Desbordes",
+            "addressLocality": "Vannes",
+            "postalCode": "56000",
+            "addressRegion": "Morbihan",
+            "addressCountry": "FR"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "09:30",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "15:00",
+              "closes": "19:00"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -424,508 +503,4 @@
                     <p>Conseils personnalisés pour sublimer vos dégustations avec les meilleurs accords.</p>
                 </div>
 
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Conseil Expert</h3>
-                    <p>Notre équipe passionnée vous guide dans vos choix avec expertise et convivialité.</p>
-                </div>
-            </div>
-
-            <!-- Gift Card Button -->
-            <div class="content-text" style="margin-top: var(--spacing-lg); text-align: center;">
-                <button class="btn btn-primary" id="openGiftCardModal"
-                    style="display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-gift"></i> Voir nos Cartes Cadeaux
-                </button>
-            </div>
-
-            <div class="content-text" style="margin-top: var(--spacing-lg); text-align: center;">
-                <p style="font-size: 1.1rem;">
-                    <strong>Nous restons à votre écoute pour toute demande particulière.</strong>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Prêt à commander ?</h2>
-                <p>Contactez-nous pour découvrir nos produits ou réserver vos plateaux</p>
-                <div class="cta-buttons">
-                    <button class="btn btn-primary" id="openOrderForm">
-                        <i class="fas fa-paper-plane"></i> Commander
-                    </button>
-                    <a href="tel:0297380988" class="btn btn-secondary">
-                        <i class="fas fa-phone"></i> Appeler Pontivy
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Form Modal -->
-    <div id="orderFormModal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content modal-large">
-            <button class="modal-close" aria-label="Fermer">&times;</button>
-            <h2 class="modal-title">Bon de Commande / Demande de Devis</h2>
-
-            <div class="modal-body">
-                <form id="orderForm" class="order-form">
-                    <!-- Section 1: Contact Information -->
-                    <div class="form-section">
-                        <h3 class="form-section-title">
-                            <i class="fas fa-user"></i>
-                            Vos Informations
-                        </h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="nom">Nom <span class="required">*</span></label>
-                                <input type="text" id="nom" name="nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="prenom">Prénom <span class="required">*</span></label>
-                                <input type="text" id="prenom" name="prenom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telephone">Téléphone <span class="required">*</span></label>
-                                <input type="tel" id="telephone" name="telephone" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Adresse E-mail <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section 2: Request Type -->
-                    <div class="form-section">
-                        <h3 class="form-section-title">
-                            <i class="fas fa-clipboard-list"></i>
-                            Type de Demande
-                        </h3>
-                        <div class="form-group">
-                            <label>S'agit-il d'une commande ou d'une demande de devis ? <span
-                                    class="required">*</span></label>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="requestType" value="commande" required>
-                                    <span>Commande</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="requestType" value="devis" required>
-                                    <span>Devis</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section 3: Product Selection -->
-                    <div class="form-section">
-                        <h3 class="form-section-title">
-                            <i class="fas fa-cheese"></i>
-                            Choix de Produits/Formules
-                        </h3>
-                        <p class="form-help">Sélectionnez au moins un produit ou une formule <span
-                                class="required">*</span></p>
-                        <div class="checkbox-grid">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="assortiment_aperitif">
-                                <span>Assortiment apéritif ou fin de repas sans présentation</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="repas_fromage">
-                                <span>Repas fromage sans présentation</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="plateau_aperitif_unique">
-                                <span>Plateau apéritif ou fin de repas sur plateau à usage unique</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="plateau_aperitif_bois">
-                                <span>Plateau apéritif ou fin de repas sur plateau bois</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="repas_plateau_unique">
-                                <span>Repas fromage sur plateau à usage unique</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="repas_plateau_bois">
-                                <span>Repas fromage sur plateau bois</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="predecoupe_aperitif_unique">
-                                <span>Pré-découpés apéritif ou fin de repas sur plateau à usage unique</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="predecoupe_aperitif_bois">
-                                <span>Pré-découpés apéritif ou fin de repas sur plateau bois</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="predecoupe_repas_unique">
-                                <span>Pré-découpés repas fromage sur plateau à usage unique</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="predecoupe_repas_bois">
-                                <span>Pré-découpés repas fromage sur plateau bois</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="raclette" id="raclette">
-                                <span>Raclette (sans présentation)</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="fondue" id="fondue">
-                                <span>Fondue (sans présentation)</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="vin">
-                                <span>Vin</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="products" value="charcuterie">
-                                <span>Charcuterie</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Section 4: Additional Details -->
-                    <div class="form-section">
-                        <h3 class="form-section-title">
-                            <i class="fas fa-comment-dots"></i>
-                            Remarques et Précisions
-                        </h3>
-                        <div class="form-group">
-                            <label for="remarques">
-                                Remarques / Précisions / Choix des produits
-                                <span id="remarquesRequired" class="required" style="display: none;">*</span>
-                            </label>
-                            <p class="form-help">Obligatoire pour les raclettes et fondues</p>
-                            <textarea id="remarques" name="remarques" rows="5"
-                                placeholder="Précisez vos choix de fromages, quantités, ou toute autre information utile..."></textarea>
-                        </div>
-                    </div>
-
-                    <!-- Section 5: Pickup Information -->
-                    <div class="form-section">
-                        <h3 class="form-section-title">
-                            <i class="fas fa-store"></i>
-                            Informations de Retrait
-                        </h3>
-
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>Boutique de retrait <span class="required">*</span></label>
-                                <div class="radio-group">
-                                    <label class="radio-label">
-                                        <input type="radio" name="boutique" value="pontivy" required>
-                                        <span>Pontivy</span>
-                                    </label>
-                                    <label class="radio-label">
-                                        <input type="radio" name="boutique" value="vannes" required>
-                                        <span>Vannes</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Mode de paiement (à la réception en boutique) <span
-                                        class="required">*</span></label>
-                                <div class="radio-group">
-                                    <label class="radio-label">
-                                        <input type="radio" name="paiement" value="carte" required>
-                                        <span>Carte bancaire</span>
-                                    </label>
-                                    <label class="radio-label">
-                                        <input type="radio" name="paiement" value="especes" required>
-                                        <span>Espèces</span>
-                                    </label>
-                                    <label class="radio-label">
-                                        <input type="radio" name="paiement" value="titre" required>
-                                        <span>Titre-restaurant</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="dateRetrait">Date de retrait souhaitée <span
-                                        class="required">*</span></label>
-                                <input type="date" id="dateRetrait" name="dateRetrait" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="heureRetrait">Heure de retrait <span class="required">*</span></label>
-                                <p class="form-help">Minimum 5h ouvrées de délai de préparation</p>
-                                <input type="time" id="heureRetrait" name="heureRetrait" required>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Submit Section -->
-                    <div class="form-submit-section">
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane"></i>
-                            Envoyer ma commande
-                        </button>
-                        <p class="form-disclaimer">
-                            Dès que vous cliquez, la commande ou demande de devis nous est envoyée automatiquement.
-                            Vous ne recevrez pas de confirmation par mail sauf si nous avons besoin de renseignements
-                            supplémentaires.
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Fromages de nos Terroirs</h4>
-                    <p>Crémiers-fromagers passionnés, spécialisés dans l'affinage artisanal depuis 2010.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-section footer-contact">
-                    <h4>Pontivy</h4>
-                    <div class="footer-contact-item">
-                        <svg class="icon-location" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                                fill="currentColor" />
-                        </svg>
-                        <div>
-                            <p>5 B rue Colette Besson</p>
-                            <p>Zone de Pont-Er-Morh</p>
-                            <p>56300 Pontivy, Morbihan</p>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
-                                fill="currentColor" />
-                        </svg>
-                        <a href="tel:0297380988">02 97 38 09 88</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <svg class="icon-email" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                                fill="currentColor" />
-                        </svg>
-                        <a href="mailto:fromages.terroirs@free.fr">fromages.terroirs@free.fr</a>
-                    </div>
-                    <p class="footer-hours"><strong>Horaires:</strong> Lun-Sam 9h-13h & 14h-19h</p>
-                </div>
-
-                <div class="footer-section footer-contact">
-                    <h4>Vannes</h4>
-                    <div class="footer-contact-item">
-                        <svg class="icon-location" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                                fill="currentColor" />
-                        </svg>
-                        <div>
-                            <p>55 avenue Borgnis Desbordes</p>
-                            <p>56000 Vannes, Morbihan</p>
-                        </div>
-                    </div>
-                    <div class="footer-contact-item">
-                        <svg class="icon-phone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
-                                fill="currentColor" />
-                        </svg>
-                        <a href="tel:0297630640">02 97 63 06 40</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <svg class="icon-email" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                                fill="currentColor" />
-                        </svg>
-                        <a href="mailto:fromages.terroirs@free.fr">fromages.terroirs@free.fr</a>
-                    </div>
-                    <p class="footer-hours"><strong>Horaires:</strong> Mar-Sam 9h30-13h & 15h-19h</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Fromages de nos Terroirs | Tous droits réservés |
-                    <a href="mentions-legales.html">Mentions Légales</a> |
-                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Chatbot Bubble -->
-    <div class="chatbot-container">
-        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Ouvrir le chat">
-            <i class="fas fa-comments"></i>
-            <span class="chatbot-badge">1</span>
-        </button>
-
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header">
-                <div class="chatbot-header-content">
-                    <div class="chatbot-avatar">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div>
-                        <h4>Assistant Fromager</h4>
-                        <span class="chatbot-status">En ligne</span>
-                    </div>
-                </div>
-                <button class="chatbot-close" id="chatbotClose" aria-label="Fermer le chat">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <div class="chatbot-messages" id="chatbotMessages">
-                <div class="chatbot-message bot-message">
-                    <div class="message-avatar">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="message-content">
-                        <p>Bonjour! 👋 Comment puis-je vous aider aujourd'hui?</p>
-                        <span class="message-time">Maintenant</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="chatbot-quick-replies">
-                <button class="quick-reply">Horaires d'ouverture</button>
-                <button class="quick-reply">Commander</button>
-                <button class="quick-reply">Conseils fromages</button>
-            </div>
-
-            <div class="chatbot-input">
-                <input type="text" placeholder="Écrivez votre message..." id="chatbotInput">
-                <button class="chatbot-send" id="chatbotSend" aria-label="Envoyer">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Fondue Chart Modal -->
-    <div class="lightbox-modal" id="fondueChartModal">
-        <span class="lightbox-close" id="fondueChartClose">&times;</span>
-        <img class="lightbox-image" src="images/carte-fondue.png" alt="Carte des Fondues">
-    </div>
-
-    <!-- Raclette Chart Modal -->
-    <div class="lightbox-modal" id="racletteChartModal">
-        <span class="lightbox-close" id="racletteChartClose">&times;</span>
-        <img class="lightbox-image" src="images/carte-raclettes.png" alt="Carte des Raclettes">
-    </div>
-
-    <!-- Price Chart Modal -->
-    <div class="lightbox-modal" id="priceChartModal">
-        <span class="lightbox-close" id="priceChartClose">&times;</span>
-        <img class="lightbox-image" src="images/carta_tarifas_fromages.png"
-            alt="Carta de Tarifas - Assortiments de fromages">
-    </div>
-
-    <!-- Gift Card Modal -->
-    <div class="lightbox-modal" id="giftCardModal">
-        <span class="lightbox-close" id="giftCardClose">&times;</span>
-        <div
-            style="display: flex; flex-direction: column; align-items: center; gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 2rem;">
-            <h2 style="color: white; font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Nos Cartes Cadeaux
-            </h2>
-
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; width: 100%;">
-                <!-- Carte Cadeau Recto -->
-                <div
-                    style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
-                    <h3
-                        style="color: var(--color-primary); font-family: 'Playfair Display', serif; margin-bottom: 1rem; font-size: 1.5rem;">
-                        Carte cadeau</h3>
-                    <div style="position: relative; margin-bottom: 1rem;">
-                        <img src="images/carte-cadeau-recto.jpg" alt="Carte Cadeau - Recto"
-                            style="width: 100%; height: auto; border-radius: 8px;">
-                        <!-- Floating Download Icon -->
-                        <a href="images/carte-cadeau-recto.jpg" download="carte-cadeau-recto.jpg"
-                            style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"
-                            onmouseover="this.style.background='var(--color-primary)'; this.style.transform='scale(1.1)';"
-                            onmouseout="this.style.background='rgba(0,0,0,0.7)'; this.style.transform='scale(1)';">
-                            <i class="fas fa-download"></i>
-                        </a>
-                    </div>
-                    <div style="color: #333; line-height: 1.6;">
-                        <p style="margin-bottom: 0.5rem;">Toutes les occasions sont bonnes pour offrir du plaisir à un
-                            proche !</p>
-                        <p style="margin-bottom: 0.5rem;">Rien de plus facile avec cette carte cadeau à offrir</p>
-                        <p style="margin-bottom: 1rem;">À valoir sur l'ensemble des produits : fromage, vin, épicerie...
-                        </p>
-                    </div>
-                    <a href="images/carte-cadeau-recto.jpg" download="carte-cadeau-recto.jpg" class="btn btn-secondary"
-                        style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <i class="fas fa-download"></i> Télécharger Recto
-                    </a>
-                </div>
-
-                <!-- Carte Cadeau Verso -->
-                <div
-                    style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
-                    <h3
-                        style="color: var(--color-primary); font-family: 'Playfair Display', serif; margin-bottom: 1rem; font-size: 1.5rem;">
-                        Carte cadeau - verso</h3>
-                    <div style="position: relative; margin-bottom: 1rem;">
-                        <div class="gift-card-item">
-                            <picture>
-                                <source srcset="images/carte-cadeau-verso.webp" type="image/webp">
-                                <img src="images/carte-cadeau-verso.jpg" alt="Carte Cadeau - Verso"
-                                    class="gift-card-img" loading="lazy"
-                                    style="width: 100%; height: auto; border-radius: 8px;">
-                            </picture>
-                        </div>
-                        <!-- Floating Download Icon -->
-                        <a href="images/carte-cadeau-verso.jpg" download="carte-cadeau-verso.jpg"
-                            style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"
-                            onmouseover="this.style.background='var(--color-primary)'; this.style.transform='scale(1.1)';"
-                            onmouseout="this.style.background='rgba(0,0,0,0.7)'; this.style.transform='scale(1)';">
-                            <i class="fas fa-download"></i>
-                        </a>
-                    </div>
-                    <div style="color: #333; line-height: 1.6;">
-                        <p style="margin-bottom: 1rem;">Cette carte cadeau est disponible en boutique, ou à distance
-                            (pour cela, appeler au numéro de téléphone indiqué, ou envoyer un courrier électronique)</p>
-                    </div>
-                    <a href="images/carte-cadeau-verso.jpg" download="carte-cadeau-verso.jpg" class="btn btn-secondary"
-                        style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <i class="fas fa-download"></i> Télécharger Verso
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox-modal" id="lightboxModal">
-        <span class="lightbox-close" id="lightboxClose">&times;</span>
-        <img class="lightbox-image" id="lightboxImage" src="" alt="Agrandissement de l'image">
-    </div>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="script.js?v=1.3.0"></script>
-</body>
-
-</html>
+                <
